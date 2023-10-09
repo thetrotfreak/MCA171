@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    nav {
+        border-bottom: 1px solid black;
+    }
+
+    .crumbs ol {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .crumb {
+        display: inline-block;
+    }
+
+    .crumb a {
+        text-decoration: none;
+    }
+
+    .crumb a::after {
+        display: inline-block;
+        content: '/';
+    }
+</style>
+
+<body>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="{% url 'home' %}">Home</a></li>
+            <li class="crumb"><a href="{% url 'register' %}">Register</a></li>
+            <li class="crumb"><a href="{% url 'about' %}">About Us</a></li>
+            <li class="crumb"><a href="/admin">Admin</a></li>
+        </ol>
+    </nav>
+    <div style="display: flex; flex-direction: column; place-items: center; place-content: center;">
+        <h1>
+            Regular Lab Questions 11
+        </h1>
+    </div>
+</body>
+
+</html>
